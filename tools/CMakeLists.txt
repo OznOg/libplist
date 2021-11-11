@@ -9,3 +9,7 @@ target_link_libraries(plistutil PRIVATE plist)
 target_compile_definitions(plistutil PRIVATE PACKAGE_URL=${PACKAGE_URL}
                                              PACKAGE_BUGREPORT=${PACKAGE_BUGREPORT}
                                              PACKAGE_VERSION=${PACKAGE_VERSION})
+
+install(TARGETS plistutil
+        EXPORT plistutil_export)
+
