@@ -5,6 +5,7 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 include_directories(${CMAKE_SOURCE_DIR}/)
 include_directories(${PROJECT_SOURCE_DIR})
 
+find_package(Threads REQUIRED)
 
 
 add_library(plist SHARED
