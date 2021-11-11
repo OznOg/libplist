@@ -14,3 +14,7 @@ message(STATUS "CMAKE_SOURCE_DIR : ${CMAKE_SOURCE_DIR}")
 add_subdirectory(libcnary)
 add_subdirectory(src)
 add_subdirectory(tools)
+
+enable_testing()
+
+add_subdirectory(test)
