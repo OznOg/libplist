@@ -18,3 +18,16 @@ add_subdirectory(tools)
 enable_testing()
 
 add_subdirectory(test)
+
+include(CMakePackageConfigHelpers)
+
+write_basic_package_version_file(
+    plistConfigVersion.cmake
+    VERSION ${PACKAGE_VERSION}
+    COMPATIBILITY AnyNewerVersion)
+
+install(FILES ${CMAKE_BINARY_DIR}/plistConfigVersion.cmake DESTINATION lib/cmake/plist)
+
+install(EXPORT plistutil_export
+        FILE PlistConfig.cmake
+        DESTINATION lib/cmake/plist)
